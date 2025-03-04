@@ -54,6 +54,13 @@ nav a:hover {
     transition: all 0.3s ease-in-out;
 }
 
+@media (max-width: 600px) {
+    nav a:hover {
+        display: block;
+        border-radius: 0%;
+    }
+}
+
 nav a::after {
     content: "";
     display: block;
@@ -84,10 +91,10 @@ nav a:hover::after {
     color: #1d3557;
 }
 
-/* Sidebar styling */
+/* Sidebar styling for desktop */
 #sidebar {
     background-color: #f8f9fa;
-    /* Light background (Bootstrap's bg-light) */
+    /* Bootstrap light background */
     border-right: 1px solid #ddd;
     min-height: 100vh;
     /* Full viewport height */
@@ -99,7 +106,7 @@ main {
     padding: 20px;
 }
 
-/* Offcanvas adjustments for mobile sidebar */
+/* Offcanvas styling for mobile sidebar */
 .offcanvas {
     background-color: #f8f9fa;
 }
