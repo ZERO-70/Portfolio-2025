@@ -1,0 +1,24 @@
+:root {
+    --black: #000000;
+    --oxford-blue: #14213d;
+    --orange-web: #fca311;
+    --platinum: #e5e5e5;
+    --white: #ffffff;
+}
+
+/* Mobile First Background Color */
+section {
+    background-color: var(--platinum);
+    transition: background-color 0.5s ease;
+    /* Light background */
+}
+
+/* Desktop Screens */
+@media (min-width: 768px) {
+    section {
+        background-color: var(--white);
+        /* White background for desktop */
+    }
+}
+
+nav {}
