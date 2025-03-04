@@ -1,47 +1,21 @@
+/* Ensure all sections are always visible */
 section {
-    opacity: 0;
-    visibility: hidden;
+    display: block;
+    opacity: 1;
+    visibility: visible;
     background-color: #f1faee;
     padding: 20px;
     margin-bottom: 20px;
-    transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
 }
 
-#home {
-    opacity: 1;
-    visibility: visible;
-}
-
-section:target {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.5s ease-in-out, visibility 0s linear 0s;
-}
-
-section {
-    display: block;
-    /* Make all sections occupy space */
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in-out;
-}
-
-section:target {
-    opacity: 1;
-    visibility: visible;
-}
-
-section:not(:target) {
-    opacity: 0;
-    visibility: hidden;
-}
-
+/* Responsive background for smaller screens */
 @media (max-width: 600px) {
     body {
         background-color: #f1faee;
     }
 }
 
+/* Image hover effects */
 img {
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     border-radius: 4px;
@@ -53,9 +27,9 @@ img:hover {
     outline: 3px solid #e63946;
     outline-offset: 2px;
     filter: brightness(1.03);
-    /* Enhanced hover effect with outline and shadow */
 }
 
+/* Header styling */
 header {
     background-color: #1d3557 !important;
     padding: 15px;
@@ -64,7 +38,7 @@ header {
     display: block;
 }
 
-
+/* Navigation link styles and hover effects */
 nav a {
     text-decoration: none;
     font-weight: bold;
@@ -78,7 +52,6 @@ nav a:hover {
     border-radius: 20%;
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
-    /* Change background color on hover */
 }
 
 nav a::after {
@@ -96,17 +69,17 @@ nav a::after {
 
 nav a:hover::after {
     width: 100%;
-    /* Underline effect on hover */
 }
 
+/* Footnote styling */
 #footnote {
     font-size: 0.8em;
     color: #1d3557;
     text-align: center;
     margin: 0;
-
 }
 
+/* Social links styling */
 .social-links {
     color: #1d3557;
 }
