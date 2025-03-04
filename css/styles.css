@@ -1,24 +1,85 @@
-:root {
-    --black: #000000;
-    --oxford-blue: #14213d;
-    --orange-web: #fca311;
-    --platinum: #e5e5e5;
-    --white: #ffffff;
-}
-
-/* Mobile First Background Color */
+/* Ensure all sections are always visible */
 section {
-    background-color: var(--platinum);
-    transition: background-color 0.5s ease;
-    /* Light background */
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    background-color: #f1faee;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-/* Desktop Screens */
-@media (min-width: 768px) {
-    section {
-        background-color: var(--white);
-        /* White background for desktop */
+/* Responsive background for smaller screens */
+@media (max-width: 600px) {
+    body {
+        background-color: #f1faee;
     }
 }
 
-nav {}
+/* Image hover effects */
+img {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 4px;
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    outline: 3px solid #e63946;
+    outline-offset: 2px;
+    filter: brightness(1.03);
+}
+
+/* Header styling */
+header {
+    background-color: #1d3557 !important;
+    padding: 15px;
+    width: 100%;
+    color: white;
+    display: block;
+}
+
+/* Navigation link styles and hover effects */
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #457b9d;
+    border-radius: 20%;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: #e63946;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Footnote styling */
+#footnote {
+    font-size: 0.8em;
+    color: #1d3557;
+    text-align: center;
+    margin: 0;
+}
+
+/* Social links styling */
+.social-links {
+    color: #1d3557;
+}
