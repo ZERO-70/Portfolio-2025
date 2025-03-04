@@ -1,7 +1,7 @@
 section {
     opacity: 0;
     visibility: hidden;
-    background-color: #ffffff;
+    background-color: #f1faee;
     padding: 20px;
     margin-bottom: 20px;
     transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
@@ -38,9 +38,32 @@ section:not(:target) {
 
 @media (max-width: 600px) {
     body {
-        background-color: rgb(229, 229, 229);
+        background-color: #f1faee;
     }
 }
+
+img {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 4px;
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    outline: 3px solid #e63946;
+    outline-offset: 2px;
+    filter: brightness(1.03);
+    /* Enhanced hover effect with outline and shadow */
+}
+
+header {
+    background-color: #1d3557 !important;
+    padding: 15px;
+    width: 100%;
+    color: white;
+    display: block;
+}
+
 
 nav a {
     text-decoration: none;
@@ -51,7 +74,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgb(100, 141, 237);
+    background-color: #457b9d;
     border-radius: 20%;
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
@@ -63,7 +86,7 @@ nav a::after {
     display: block;
     width: 0%;
     height: 3px;
-    background-color: orange;
+    background-color: #e63946;
     transition: width 0.3s ease-in-out;
     position: absolute;
     left: 50%;
@@ -74,4 +97,16 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
     /* Underline effect on hover */
+}
+
+#footnote {
+    font-size: 0.8em;
+    color: #1d3557;
+    text-align: center;
+    margin: 0;
+
+}
+
+.social-links {
+    color: #1d3557;
 }
