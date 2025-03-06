@@ -145,8 +145,8 @@ main {
     background-color: #457b9d;
     color: white;
     position: absolute;
-    bottom: 60px;
-    left: 330px;
+    bottom: 65px;
+    left: 400px;
     transition: transform 0.3s ease;
     font-size: small;
 }
