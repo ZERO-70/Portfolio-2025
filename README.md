@@ -1,7 +1,5 @@
 # Portfolio-2025
 
-![Portfolio-2025 Logo](https://avatars.githubusercontent.com/u/148679199?v=4)
-
 ## Description
 
 Portfolio-2025 is a portfolio demo made using HTML, CSS, and Bootstrap. It showcases a modern and responsive design, suitable for displaying personal projects, skills, and contact information.
