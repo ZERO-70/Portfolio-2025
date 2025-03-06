@@ -29,13 +29,23 @@ img:hover {
     filter: brightness(1.03);
 }
 
-/* Header styling */
+/* Header styling with continuous background color change */
 header {
-    background-color: #1d3557 !important;
     padding: 15px;
     width: 100%;
     color: white;
     display: block;
+    animation: backgroundChange 10s infinite alternate;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-color: #1d3557;
+    }
+
+    100% {
+        background-color: #457b9d;
+    }
 }
 
 /* Navigation link styles and hover effects */
@@ -109,4 +119,95 @@ main {
 /* Offcanvas styling for mobile sidebar */
 .offcanvas {
     background-color: #f8f9fa;
+}
+
+.card-repo {
+    background-size: 100% 100%;
+    background-position: center;
+    height: 200px;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .card-repo {
+        height: 180px;
+    }
+}
+
+.card-repo:hover {
+    transform: scale(1.05);
+
+}
+
+
+
+.meracard {
+    background-color: #457b9d;
+    color: white;
+    position: absolute;
+    bottom: 60px;
+    left: 305px;
+    transition: transform 0.3s ease;
+    font-size: small;
+}
+
+@media (max-width: 600px) {
+    .meracard {
+        left: 242px;
+        bottom: 50px;
+    }
+}
+
+.meracard:hover {
+    transform: scale(1.05);
+    background-color: #1d3557;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Cypher text animation */
+@keyframes cypher {
+    0% {
+        content: "█";
+    }
+
+    10% {
+        content: "██";
+    }
+
+    20% {
+        content: "███";
+    }
+
+    30% {
+        content: "████";
+    }
+
+    40% {
+        content: "█████";
+    }
+
+    50% {
+        content: "██████";
+    }
+
+    60% {
+        content: "███████";
+    }
+
+    70% {
+        content: "████████";
+    }
+
+    80% {
+        content: "█████████";
+    }
+
+    90% {
+        content: "██████████";
+    }
+
+    100% {
+        content: "Decrypted Text";
+    }
 }
