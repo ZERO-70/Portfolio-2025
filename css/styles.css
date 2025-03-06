@@ -124,7 +124,7 @@ main {
 .card-repo {
     background-size: 100% 100%;
     background-position: center;
-    height: 240px;
+    height: 500px;
     transition: transform 0.3s ease;
 }
 
