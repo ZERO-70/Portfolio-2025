@@ -35,7 +35,7 @@ header {
     width: 100%;
     color: white;
     display: block;
-    animation: backgroundChange 10s infinite alternate;
+    animation: backgroundChange 6s infinite alternate;
 }
 
 @keyframes backgroundChange {
@@ -121,48 +121,51 @@ main {
     background-color: #f8f9fa;
 }
 
-.card-repo {
-    background-size: 100% 100%;
-    background-position: center;
-    height: 180px;
+/* Replace your card-repo and meracard styles with these */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
     transition: transform 0.3s ease;
 }
 
-@media (max-width: 600px) {
-    .card-repo {
+.project-card:hover .card-img-container img {
+    transform: scale(1.05);
+}
+
+.project-card .btn {
+    background-color: #457b9d;
+    border-color: #457b9d;
+    transition: all 0.3s ease;
+}
+
+.project-card .btn:hover {
+    background-color: #1d3557;
+    border-color: #1d3557;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .card-img-container {
         height: 180px;
     }
-}
-
-.card-repo:hover {
-    transform: scale(1.05);
-
-}
-
-
-
-.meracard {
-    background-color: #457b9d;
-    color: white;
-    position: absolute;
-    bottom: 65px;
-    left: 400px;
-    transition: transform 0.3s ease;
-    font-size: small;
-}
-
-@media (max-width: 600px) {
-    .meracard {
-        left: 242px;
-        bottom: 50px;
-    }
-}
-
-.meracard:hover {
-    transform: scale(1.05);
-    background-color: #1d3557;
-    color: white;
-    transition: background-color 0.3s ease;
 }
 
 /* Cypher text animation */
